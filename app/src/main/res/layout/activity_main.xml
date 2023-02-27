@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="370dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="#0B5A98"
+        android:text="menghitung berat badan ideal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="387dp"
+        android:layout_height="269dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/gambar">
+
+            <EditText
+                android:id="@+id/textNama"
+                android:layout_width="354dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="18dp"
+                android:ems="10"
+                android:hint="Name"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <EditText
+                android:id="@+id/txtTG"
+                android:layout_width="152dp"
+                android:layout_height="42dp"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:hint="Tinggi Badan"
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toStartOf="@+id/textNama"
+                app:layout_constraintTop_toBottomOf="@+id/textNama"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="15dp"
+                android:text="CM"
+                android:textColor="#2C2A2A"
+                android:textSize="18dp"
+                app:layout_constraintStart_toEndOf="@+id/txtTG"
+                app:layout_constraintTop_toTopOf="@+id/txtTG" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="235dp"
+                android:layout_height="51dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toEndOf="@+id/textView"
+                app:layout_constraintTop_toBottomOf="@+id/txtTG">
+
+                <RadioButton
+                    android:id="@+id/rblaki"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Laki - Laki" />
+
+                <RadioButton
+                    android:id="@+id/rbPerempuan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Perempuan" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:text="Jenis Kelamin"
+                android:textColor="#2C2A2A"
+                android:textSize="18dp"
+                android:textStyle="bold|italic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtTG" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="5dp"
+                android:text="Berat Badan :"
+                android:textColor="#2C2A2A"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+            <TextView
+                android:id="@+id/hasil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="0"
+                android:textColor="#2C2A2A"
+                android:textSize="18dp"
+                app:layout_constraintStart_toEndOf="@+id/textView3"
+                app:layout_constraintTop_toTopOf="@+id/textView3" />
+
+            <Button
+                android:id="@+id/btHitung"
+                android:layout_width="95dp"
+                android:layout_height="41dp"
+                android:layout_marginStart="146dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#2770AA"
+                android:text="HITUNG"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hasil"
+                tools:ignore="TouchTargetSizeCheck" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btReset"
+        android:layout_width="97dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="#AA251C"
+        android:text="reset"
+        app:cornerRadius="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/btSimpan"
+        android:layout_width="97dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="11dp"
+        android:backgroundTint="#106C63"
+        android:text="simpan"
+        app:cornerRadius="25dp"
+        app:layout_constraintEnd_toStartOf="@+id/btReset"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listData"
+        android:layout_width="409dp"
+        android:layout_height="333dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btReset" />
+</androidx.constraintlayout.widget.ConstraintLayout>
